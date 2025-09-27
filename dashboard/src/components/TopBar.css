@@ -1,0 +1,114 @@
+.topbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  min-height: 60px;
+}
+
+.indices-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.index-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.index-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  min-width: 70px;
+}
+
+.index-points {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  min-width: 80px;
+}
+
+.index-change {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Positive and negative states */
+.positive {
+  color: #00d09c;
+}
+
+.negative {
+  color: #ff4d4f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topbar-container {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .indices-container {
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .index-item {
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .index-name {
+    min-width: 60px;
+    font-size: 12px;
+  }
+  
+  .index-points {
+    min-width: 70px;
+    font-size: 13px;
+  }
+  
+  .index-change {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-container {
+    padding: 8px 12px;
+  }
+  
+  .indices-container {
+    gap: 15px;
+  }
+  
+  .index-item {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  
+  .index-name {
+    min-width: auto;
+    font-size: 11px;
+  }
+  
+  .index-points {
+    min-width: auto;
+    font-size: 12px;
+  }
+  
+  .index-change {
+    font-size: 10px;
+  }
+}

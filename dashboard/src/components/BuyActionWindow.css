@@ -1,0 +1,272 @@
+/* Trading Window Container */
+.trading-window {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  width: 380px;
+  max-width: 95vw;
+  font-family: 'Inter', sans-serif;
+  animation: slideInUp 0.3s ease-out;
+}
+
+/* Window Header */
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.stock-info h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.stock-price {
+  font-size: 1.1rem;
+  color: #48bb78;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #718096;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #f7fafc;
+  color: #e53e3e;
+}
+
+/* Order Type Selection */
+.order-type-section {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.order-type-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.order-type-tab {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.order-type-tab.active {
+  background: #387ed1;
+  color: white;
+  border-color: #387ed1;
+}
+
+.order-type-tab:hover:not(.active) {
+  background: #edf2f7;
+}
+
+/* Input Section */
+.input-section {
+  padding: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #387ed1;
+  box-shadow: 0 0 0 3px rgba(56, 126, 209, 0.1);
+}
+
+/* Order Summary */
+.order-summary {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.summary-item.total {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 8px;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+/* Action Buttons */
+.action-buttons {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-buy {
+  flex: 2;
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-buy:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.btn-cancel {
+  flex: 1;
+  background: #718096;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background: #4a5568;
+}
+
+/* Quick Quantity */
+.quick-quantity {
+  padding: 15px 20px;
+  border-top: 1px solid #f1f5f9;
+  background: #fafafa;
+}
+
+.quick-quantity span {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.quantity-options {
+  display: flex;
+  gap: 8px;
+}
+
+.quantity-option {
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-option:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .trading-window {
+    width: 100%;
+    margin: 10px;
+  }
+  
+  .window-header {
+    padding: 15px;
+  }
+  
+  .order-type-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
