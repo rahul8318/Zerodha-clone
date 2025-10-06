@@ -61,7 +61,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/google/callback"
+    callbackURL: "https://zerodha-clone-7vge.onrender.comauth/google/callback"
   },
   async (accessToken, refreshToken, profile, done) => {
     // Find or create user
@@ -94,7 +94,7 @@ const GitHubStrategy = require("passport-github2").Strategy;
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://localhost:5000/auth/github/callback"
+    callbackURL: "https://zerodha-clone-7vge.onrender.com/auth/github/callback"
   },
   async (accessToken, refreshToken, profile, done) => {
     try {
