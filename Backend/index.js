@@ -19,9 +19,14 @@ const OrderModel = require('./models/OrderModel');
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"], 
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://zerodha-clone-frontend-wy3u.vercel.app" // add this
+  ],
   credentials: true,
 }));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
@@ -86,7 +91,7 @@ app.get("/auth/google",
 app.get("/auth/google/callback", 
   passport.authenticate("google", { failureRedirect: "/" }),
   (req, res) => {
-    res.redirect("http://localhost:3000"); 
+    res.redirect("https://zerodha-clone-frontend-wy3u.vercel.app"); 
   }
 );
 const GitHubStrategy = require("passport-github2").Strategy;
@@ -123,7 +128,7 @@ app.get("/auth/github/callback",
   passport.authenticate("github", { failureRedirect: "/" }),
   (req, res) => {
     // Successful login, redirect to frontend
-    res.redirect("http://localhost:3000");
+    res.redirect("https://zerodha-clone-frontend-wy3u.vercel.app");
   }
 );
 
